@@ -1,1 +1,516 @@
-<h1>Git hub pages hhhafa </h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de [Tu Nombre] - Estudiante Universitario</title>
+    <style>
+        /* Estilos modernos y profesionales */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+        }
+        
+        nav a {
+            color: var(--dark);
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            font-weight: 500;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover, nav a.active {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        section {
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 0.5rem auto;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            display: block;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-info {
+            padding: 1.5rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .tag {
+            background: var(--light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .btn {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: var(--primary);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            
+            nav a {
+                padding: 0.5rem 1rem;
+                margin: 0.2rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="container">
+                <img src="tu-foto.jpg" alt="Tu foto" class="profile-img">
+                <h1>[Tu Nombre]</h1>
+                <h2>Estudiante de [Tu Carrera] en [Tu Universidad]</h2>
+                <p>Apasionado por [tus intereses principales]. Buscando oportunidades para crecer profesionalmente.</p>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <a href="#inicio" class="active">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#formacion">Formación</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <section id="inicio">
+            <!-- Contenido de inicio ya está en el header -->
+        </section>
+        
+        <section id="sobre-mi">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>¡Hola! Soy [Tu Nombre]</h3>
+                    <p>Soy un estudiante de [tu carrera] en [tu universidad] con interés especial en [áreas específicas de tu carrera]. Actualmente cursando mi [año de estudio] año y buscando oportunidades para aplicar mis conocimientos en proyectos reales.</p>
+                    <p>Me considero una persona [describe tus cualidades, ej: proactiva, creativa, analítica], con gran capacidad para trabajar en equipo y aprender rápidamente nuevas tecnologías.</p>
+                    <p>Fuera del ámbito académico, disfruto de [tus hobbies o intereses personales], lo que me ayuda a mantener un buen equilibrio entre mi vida personal y profesional.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="formacion">
+            <h2 class="section-title">Formación Académica</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>[Tu Universidad]</h3>
+                    <p>[Tu Carrera]</p>
+                    <p>[Año de inicio] - [Año de finalización (o presente)]</p>
+                    <p>Promedio: [Tu promedio si deseas incluirlo]</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Cursos Relevantes</h3>
+                    <ul style="text-align: left; padding-left: 1.2rem;">
+                        <li>Curso 1</li>
+                        <li>Curso 2</li>
+                        <li>Curso 3</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Logros</h3>
+                    <ul style="text-align: left; padding-left: 1.2rem;">
+                        <li>Premio o reconocimiento 1</li>
+                        <li>Participación en evento académico</li>
+                        <li>Beca o distinción</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="habilidades">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Técnicas</h3>
+                    <ul style="text-align: left; padding-left: 1.2rem;">
+                        <li>Habilidad técnica 1</li>
+                        <li>Habilidad técnica 2</li>
+                        <li>Habilidad técnica 3</li>
+                        <li>Habilidad técnica 4</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Idiomas</h3>
+                    <ul style="text-align: left; padding-left: 1.2rem;">
+                        <li>Idioma 1 - Nivel</li>
+                        <li>Idioma 2 - Nivel</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Blandas</h3>
+                    <ul style="text-align: left; padding-left: 1.2rem;">
+                        <li>Trabajo en equipo</li>
+                        <li>Comunicación efectiva</li>
+                        <li>Gestión del tiempo</li>
+                        <li>Resolución de problemas</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Herramientas</h3>
+                    <ul style="text-align: left; padding-left: 1.2rem;">
+                        <li>Herramienta 1</li>
+                        <li>Herramienta 2</li>
+                        <li>Herramienta 3</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="proyectos">
+            <h2 class="section-title">Proyectos Académicos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="proyecto1.jpg" alt="Proyecto 1" class="project-img">
+                    <div class="project-info">
+                        <h3>Nombre del Proyecto 1</h3>
+                        <p>Breve descripción del proyecto, objetivos y tu contribución específica.</p>
+                        <div class="project-tags">
+                            <span class="tag">Tecnología 1</span>
+                            <span class="tag">Tecnología 2</span>
+                            <span class="tag">Área</span>
+                        </div>
+                        <a href="#" class="btn">Ver más</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="proyecto2.jpg" alt="Proyecto 2" class="project-img">
+                    <div class="project-info">
+                        <h3>Nombre del Proyecto 2</h3>
+                        <p>Breve descripción del proyecto, objetivos y tu contribución específica.</p>
+                        <div class="project-tags">
+                            <span class="tag">Tecnología 1</span>
+                            <span class="tag">Tecnología 2</span>
+                            <span class="tag">Área</span>
+                        </div>
+                        <a href="#" class="btn">Ver más</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="proyecto3.jpg" alt="Proyecto 3" class="project-img">
+                    <div class="project-info">
+                        <h3>Nombre del Proyecto 3</h3>
+                        <p>Breve descripción del proyecto, objetivos y tu contribución específica.</p>
+                        <div class="project-tags">
+                            <span class="tag">Tecnología 1</span>
+                            <span class="tag">Tecnología 2</span>
+                            <span class="tag">Área</span>
+                        </div>
+                        <a href="#" class="btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacto">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <input type="text" id="subject" name="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <h3>[Tu Nombre]</h3>
+            <p>Estudiante de [Tu Carrera] | [Tu Universidad]</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:tucorreo@ejemplo.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2023 [Tu Nombre]. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scrolling para los enlaces del menú
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Actualizar clase activa
+                document.querySelectorAll('nav a').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+        
+        // Cambiar clase activa al hacer scroll
