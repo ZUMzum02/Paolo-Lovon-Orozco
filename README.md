@@ -1,2 +1,2 @@
 # Paolo
-pagina de chill
+pagina de chill para aprobar Introduccion a la Ciencia de la Computaciòn
