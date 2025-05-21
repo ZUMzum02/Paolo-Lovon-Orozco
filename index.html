@@ -3,111 +3,219 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paolo Lovon - Estudiante</title>
+  <title>Presentación de Paolo Lovon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+    :root {
+      --primary-color: #8e44ad;
+      --secondary-color: #9b59b6;
+      --accent-color: #d48be0;
+      --text-color: #2c3e50;
+      --light-bg: #f6f4fa;
+      --white: #ffffff;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
       margin: 0;
-      padding: 20px;
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
     }
     
-    .contenedor {
-      max-width: 800px;
-      margin: 0 auto;
-      background: white;
-      padding: 30px;
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: var(--white);
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: var(--shadow);
     }
     
-    .perfil {
+    header {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 2rem;
+      position: relative;
     }
     
-    .foto {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
+    .profile-pic {
+      width: 180px;
+      height: 180px;
       object-fit: cover;
-      border: 3px solid #8e44ad;
-      margin-bottom: 15px;
+      border-radius: 50%;
+      border: 4px solid var(--accent-color);
+      margin-bottom: 1.5rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+      clip-path: circle(50% at 50% 50%);
     }
     
     h1 {
-      color: #8e44ad;
-      margin-bottom: 5px;
+      color: var(--primary-color);
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
     }
     
     h2 {
-      color: #666;
-      font-size: 18px;
-      margin-bottom: 20px;
+      color: var(--secondary-color);
+      font-weight: 400;
+      margin-bottom: 1rem;
     }
     
-    .seccion {
-      margin-bottom: 25px;
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .social-links a {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      transition: var(--transition);
+    }
+    
+    .social-links a:hover {
+      color: var(--accent-color);
+      transform: translateY(-3px);
+    }
+    
+    section {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background-color: rgba(212, 139, 224, 0.05);
+      border-radius: 8px;
     }
     
     h3 {
-      color: #8e44ad;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 5px;
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent-color);
     }
     
-    .proyecto {
-      background: #f9f9f9;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 5px;
+    p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+    
+    ul {
+      list-style: none;
+    }
+    
+    li {
+      margin-bottom: 0.8rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    li:before {
+      content: "•";
+      color: var(--accent-color);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
     }
     
     a {
-      color: #9b59b6;
+      color: var(--secondary-color);
       text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
     }
     
     a:hover {
+      color: var(--primary-color);
       text-decoration: underline;
+    }
+    
+    .project {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--accent-color);
+    }
+    
+    .project h4 {
+      color: var(--secondary-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+      color: #777;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        margin: 1rem;
+        padding: 1rem;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="contenedor">
-    <div class="perfil">
-      <img src="foto-estudiante.jpg" alt="Foto de Paolo" class="foto">
+  <div class="container">
+    <header>
+      <img src="foto-estudiante.jpg" alt="Foto de Paolo Lovon" class="profile-pic">
       <h1>Paolo Stefano Lovon Orozco</h1>
-      <h2>Estudiante de Ciencia de la Computación</h2>
-    </div>
+      <h2><i class="fas fa-graduation-cap"></i> Ciencia de la Computación - Universidad Católica San Pablo</h2>
+      
+      <div class="social-links">
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </header>
     
-    <div class="seccion">
-      <h3>Sobre mí</h3>
+    <section id="biografia">
+      <h3><i class="fas fa-user"></i> Biografía</h3>
       <p>
-        Estudiante tranquilo que prefiere hacer las cosas bien sin prisas. 
-        Me gusta resolver problemas con calma y buena música de fondo.
+        Paolo es ese estudiante que siempre va con flow tranquilo, audífonos puestos y mirada serena. No se estresa fácil, pero eso no significa que no haga las cosas bien. Le gusta entender a fondo lo que estudia, pero sin drama. Prefiere el trabajo bien hecho al trabajo rápido.
       </p>
       <p>
-        <strong>Mi lema:</strong> "Primero respirar, después compilar."
+        Fan de los memes, los atajos de teclado y los mates con calma. Si hay que resolver un problema, lo hace sin apuro, con una playlist lo-fi de fondo y una sonrisa medio dormida. Nunca lo verás gritando, pero sí pensando.
       </p>
-    </div>
+      <p>
+        <strong>Filosofía:</strong> "Primero respirar, después compilar."<br>
+        <strong>Lema:</strong> "No corras, todo llega."
+      </p>
+    </section>
     
-    <div class="seccion">
-      <h3>Mis proyectos</h3>
+    <section id="proyectos">
+      <h3><i class="fas fa-code"></i> Proyectos Destacados</h3>
       
-      <div class="proyecto">
-        <h4>Sistema de Gestión Académica</h4>
-        <p>Plataforma web para administrar cursos y calificaciones.</p>
-        <a href="#">Ver proyecto →</a>
+      <div class="project">
+        <h4>Proyecto 1: Sistema de Gestión Académica</h4>
+        <p>Plataforma web para administrar cursos, estudiantes y calificaciones en instituciones educativas.</p>
+        <a href="#" class="btn">Ver detalles <i class="fas fa-arrow-right"></i></a>
       </div>
       
-      <div class="proyecto">
-        <h4>App de Notas Inteligentes</h4>
-        <p>Organiza tus apuntes y genera resúmenes automáticos.</p>
-        <a href="#">Ver proyecto →</a>
+      <div class="project">
+        <h4>Proyecto 2: Aplicación de Notas Inteligentes</h4>
+        <p>Herramienta para organizar apuntes con búsqueda semántica y generación automática de resúmenes.</p>
+        <a href="#" class="btn">Ver detalles <i class="fas fa-arrow-right"></i></a>
       </div>
-    </div>
+    </section>
+    
+    <footer>
+      <p>© 2023 Paolo Lovon | Todos los derechos reservados</p>
+    </footer>
   </div>
 </body>
 </html>
