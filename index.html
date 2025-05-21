@@ -3,311 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Presentación de Paolo Lovon</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Paolo Lovon - Estudiante</title>
   <style>
-    :root {
-      --primary-color: #8e44ad;
-      --secondary-color: #9b59b6;
-      --accent-color: #d48be0;
-      --text-color: #2c3e50;
-      --light-bg: #f6f4fa;
-      --white: #ffffff;
-      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      --transition: all 0.3s ease;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background-color: var(--light-bg);
-      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+      color: #333;
     }
     
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background-color: var(--white);
+    .contenedor {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
       border-radius: 10px;
-      box-shadow: var(--shadow);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
     
-    header {
+    .perfil {
       text-align: center;
-      margin-bottom: 2rem;
-      position: relative;
+      margin-bottom: 30px;
     }
     
-    .profile-pic {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
+    .foto {
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      border: 4px solid var(--accent-color);
-      margin-bottom: 1.5rem;
-      transition: var(--transition);
-      box-shadow: var(--shadow);
-    }
-    
-    .profile-pic:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(212, 139, 224, 0.6);
+      object-fit: cover;
+      border: 3px solid #8e44ad;
+      margin-bottom: 15px;
     }
     
     h1 {
-      color: var(--primary-color);
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
+      color: #8e44ad;
+      margin-bottom: 5px;
     }
     
     h2 {
-      color: var(--secondary-color);
-      font-weight: 400;
-      margin-bottom: 1rem;
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 20px;
     }
     
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    
-    .social-links a {
-      color: var(--primary-color);
-      font-size: 1.5rem;
-      transition: var(--transition);
-    }
-    
-    .social-links a:hover {
-      color: var(--accent-color);
-      transform: translateY(-3px);
-    }
-    
-    section {
-      margin: 2rem 0;
-      padding: 1.5rem;
-      background-color: rgba(212, 139, 224, 0.05);
-      border-radius: 8px;
-      transition: var(--transition);
-    }
-    
-    section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(185, 142, 204, 0.15);
+    .seccion {
+      margin-bottom: 25px;
     }
     
     h3 {
-      color: var(--primary-color);
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--accent-color);
+      color: #8e44ad;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
     }
     
-    p {
-      margin-bottom: 1rem;
-      text-align: justify;
-    }
-    
-    ul {
-      list-style: none;
-    }
-    
-    li {
-      margin-bottom: 0.8rem;
-      position: relative;
-      padding-left: 1.5rem;
-    }
-    
-    li:before {
-      content: "•";
-      color: var(--accent-color);
-      font-weight: bold;
-      position: absolute;
-      left: 0;
+    .proyecto {
+      background: #f9f9f9;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
     }
     
     a {
-      color: var(--secondary-color);
+      color: #9b59b6;
       text-decoration: none;
-      font-weight: 500;
-      transition: var(--transition);
     }
     
     a:hover {
-      color: var(--primary-color);
       text-decoration: underline;
-    }
-    
-    .project {
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 1rem;
-      border-radius: 6px;
-      margin-bottom: 1rem;
-      border-left: 4px solid var(--accent-color);
-    }
-    
-    .project h4 {
-      color: var(--secondary-color);
-      margin-bottom: 0.5rem;
-    }
-    
-    .project p {
-      font-size: 0.9rem;
-      color: #555;
-    }
-    
-    .btn {
-      display: inline-block;
-      background-color: var(--primary-color);
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 5px;
-      margin-top: 0.5rem;
-      transition: var(--transition);
-    }
-    
-    .btn:hover {
-      background-color: var(--secondary-color);
-      text-decoration: none;
-      transform: translateY(-2px);
-    }
-    
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      padding-top: 1rem;
-      border-top: 1px solid #eee;
-      color: #777;
-    }
-    
-    @media (max-width: 768px) {
-      .container {
-        margin: 1rem;
-        padding: 1rem;
-      }
-      
-      h1 {
-        font-size: 1.8rem;
-      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <img src="foto-estudiante.jpg" alt="Foto de Paolo Lovon" class="profile-pic">
+  <div class="contenedor">
+    <div class="perfil">
+      <img src="foto-estudiante.jpg" alt="Foto de Paolo" class="foto">
       <h1>Paolo Stefano Lovon Orozco</h1>
-      <h2><i class="fas fa-graduation-cap"></i> Ciencia de la Computación - Universidad Católica San Pablo</h2>
-      
-      <div class="social-links">
-        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      </div>
-    </header>
+      <h2>Estudiante de Ciencia de la Computación</h2>
+    </div>
     
-    <section id="biografia">
-      <h3><i class="fas fa-user"></i> Biografía</h3>
+    <div class="seccion">
+      <h3>Sobre mí</h3>
       <p>
-        Paolo es ese estudiante que siempre va con flow tranquilo, audífonos puestos y mirada serena. No se estresa fácil, pero eso no significa que no haga las cosas bien. Le gusta entender a fondo lo que estudia, pero sin drama. Prefiere el trabajo bien hecho al trabajo rápido.
+        Estudiante tranquilo que prefiere hacer las cosas bien sin prisas. 
+        Me gusta resolver problemas con calma y buena música de fondo.
       </p>
       <p>
-        Fan de los memes, los atajos de teclado y los mates con calma. Si hay que resolver un problema, lo hace sin apuro, con una playlist lo-fi de fondo y una sonrisa medio dormida. Nunca lo verás gritando, pero sí pensando.
+        <strong>Mi lema:</strong> "Primero respirar, después compilar."
       </p>
-      <p>
-        <strong>Filosofía:</strong> "Primero respirar, después compilar."<br>
-        <strong>Lema:</strong> "No corras, todo llega."
-      </p>
-    </section>
+    </div>
     
-    <section id="proyectos">
-      <h3><i class="fas fa-code"></i> Proyectos Destacados</h3>
+    <div class="seccion">
+      <h3>Mis proyectos</h3>
       
-      <div class="project">
-        <h4>Proyecto 1: Sistema de Gestión Académica</h4>
-        <p>Plataforma web para administrar cursos, estudiantes y calificaciones en instituciones educativas.</p>
-        <a href="#" class="btn">Ver detalles <i class="fas fa-arrow-right"></i></a>
+      <div class="proyecto">
+        <h4>Sistema de Gestión Académica</h4>
+        <p>Plataforma web para administrar cursos y calificaciones.</p>
+        <a href="#">Ver proyecto →</a>
       </div>
       
-      <div class="project">
-        <h4>Proyecto 2: Aplicación de Notas Inteligentes</h4>
-        <p>Herramienta para organizar apuntes con búsqueda semántica y generación automática de resúmenes.</p>
-        <a href="#" class="btn">Ver detalles <i class="fas fa-arrow-right"></i></a>
+      <div class="proyecto">
+        <h4>App de Notas Inteligentes</h4>
+        <p>Organiza tus apuntes y genera resúmenes automáticos.</p>
+        <a href="#">Ver proyecto →</a>
       </div>
-      
-      <div class="project">
-        <h4>Proyecto 3: Juego Educativo de Programación</h4>
-        <p>Videojuego para aprender conceptos básicos de programación mediante desafíos interactivos.</p>
-        <a href="#" class="btn">Ver detalles <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </section>
-    
-    <section id="intereses">
-      <h3><i class="fas fa-heart"></i> Intereses y Hobbies</h3>
-      <ul>
-        <li><strong>Desarrollo Web:</strong> Diseño minimalista y UX/UI</li>
-        <li><strong>Tecnologías Emergentes:</strong> IA, Machine Learning</li>
-        <li><strong>Música:</strong> Lo-fi, electrónica y jazz</li>
-        <li><strong>Deportes:</strong> Ajedrez y senderismo</li>
-        <li><strong>Voluntariado:</strong> Enseñanza de programación a niños</li>
-      </ul>
-    </section>
-    
-    <section id="recursos">
-      <h3><i class="fas fa-book"></i> Recursos Recomendados</h3>
-      <ul>
-        <li><a href="#"><i class="fas fa-link"></i> Diseño Web Minimalista - Guía Completa</a></li>
-        <li><a href="#"><i class="fas fa-link"></i> Aprender HTML y CSS desde Cero</a></li>
-        <li><a href="#"><i class="fas fa-link"></i> Proyectos de Código Abierto para Contribuir</a></li>
-        <li><a href="#"><i class="fas fa-link"></i> Tutoriales de Desarrollo Frontend</a></li>
-      </ul>
-    </section>
-    
-    <footer>
-      <p>© 2023 Paolo Lovon | Todos los derechos reservados</p>
-      <p><a href="mailto:paolo@ejemplo.com"><i class="fas fa-envelope"></i> Contacto</a></p>
-    </footer>
+    </div>
   </div>
-  
-  <script>
-    // Efecto de scroll suave
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-    
-    // Animación para las secciones al aparecer
-    const sections = document.querySelectorAll('section');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
-    
-    sections.forEach(section => {
-      section.style.opacity = 0;
-      section.style.transform = 'translateY(20px)';
-      section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-      observer.observe(section);
-    });
-  </script>
 </body>
 </html>
